@@ -1,19 +1,13 @@
 import React from "react";
 import "./ListItem.css";
-import danAbramovImage from "../../../assets/images/danabramov.jpg";
 
-const ListItem = () => (
+const ListItem = (props) => (
   <li className="list-item__wrapper">
-    <img className="list-item__image" src={danAbramovImage} alt="Dan Abramov" />
+    <img className="list-item__image" src={props.image} alt={props.name} />
     <div>
-      <h2 className="list-item__name">Dan Abramov</h2>
-      <p className="list-item__description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at
-        blandit odio. In tempus ullamcorper leo, vitae hendrerit mauris cursus
-        id. Nulla sapien dolor, commodo ornare commodo non, facilisis porttitor
-        nibh.
-      </p>
-      <a className="list-item__link" href="https://twitter.com/dan_abramov">
+      <h2 className="list-item__name">{props.name}</h2>
+      <p className="list-item__description">{props.description}</p>
+      <a className="list-item__link" href={props.link}>
         visit twitter page
       </a>
     </div>
