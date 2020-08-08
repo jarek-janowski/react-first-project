@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./ListItem.css";
+import styles from "./ListItem.module.scss";
 
-const ListItem = ({ name, description, image, twitterLink }) => (
-  <li className="list-item__wrapper">
-    <img className="list-item__image" src={image} alt={name} />
+const ListItem = ({ image, name, description, twitterLink }) => (
+  <li className={styles.wrapper}>
+    <img src={image} className={styles.image} alt={name} />
     <div>
-      <h2 className="list-item__name">{name}</h2>
-      <p className="list-item__description">{description}</p>
+      <h2 className={styles.name}>{name}</h2>
+      <p className={styles.description}>{description}</p>
       <a
-        className="list-item__link"
         href={twitterLink}
         target="_blank"
+        className={styles.button}
         rel="noopener noreferrer"
       >
         visit twitter page
