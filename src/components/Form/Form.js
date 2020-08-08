@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
     <h2>Add new twitter account</h2>
-    <form className={styles.form} onSubmit={submitFn}>
+    <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
       <div className={styles.formItem}>
         <input
           className={styles.input}
@@ -12,6 +12,7 @@ const Form = ({ submitFn }) => (
           name="name"
           id="name"
           placeholder=" "
+          required
           maxLength="30"
         />
         <label className={styles.label} htmlFor="name">
@@ -25,6 +26,7 @@ const Form = ({ submitFn }) => (
           type="text"
           name="link"
           id="link"
+          required
           placeholder=" "
         />
         <label className={styles.label} htmlFor="link">
@@ -50,6 +52,7 @@ const Form = ({ submitFn }) => (
           className={styles.textarea}
           name="description"
           id="description"
+          required
           placeholder=" "
         />
         <label className={styles.label} htmlFor="description">
