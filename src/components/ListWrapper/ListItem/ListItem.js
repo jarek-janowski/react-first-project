@@ -8,7 +8,12 @@ const ListItem = ({ name, description, image, twitterLink }) => (
     <div>
       <h2 className="list-item__name">{name}</h2>
       <p className="list-item__description">{description}</p>
-      <a className="list-item__link" href={twitterLink}>
+      <a
+        className="list-item__link"
+        href={twitterLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         visit twitter page
       </a>
     </div>
